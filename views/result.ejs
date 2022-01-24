@@ -1,0 +1,155 @@
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<title>Dark Weather</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- component -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion | TailwindCSS x AlpineJS </title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="./assets/styles/styles.css" /> -->
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+  </head>
+
+
+
+
+
+</html>
+
+
+
+      <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-4 py-4 mx-auto flex flex-col">
+          <h1 class="text-3xl font-medium title-font text-white "><%=dispCity%></h1>
+          <div class="lg:w-4/6 mx-auto">
+            <div class="container mx-auto flex px-5 py-8  items-center justify-center flex-col">
+<h1 class="text-6xl font-medium title-font text-white "><%=dispTemp%>&#730C</h1>
+      <img class="lg:w-2/6 md:w-3/6 w-5/6 object-cover object-center rounded ico" alt="hero" src="<%=dispIcon%>">
+
+
+<h1 class="text-3xl text-center"><%=dispDesc%></h1>
+
+        </div>
+
+
+
+
+        <div class="container px-5 py-4 mx-auto">
+
+           <div class="flex flex-wrap -m-4 text-center">
+             <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+
+                 <img class="ico2" src="icons/humid.svg" alt="">
+                 <h2 class="title-font font-medium text-3xl text-white"><%=dispHumid%></h2>
+                 <p class="leading-relaxed">Humidity</p>
+               </div>
+             </div>
+             <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+
+                 <img src="icons/wind.svg" class="ico2">
+                 <h2 class="title-font font-medium text-3xl text-white"><%=dispWind%>&#13223</h2>
+                 <p class="leading-relaxed">Wind Speed</p>
+               </div>
+             </div>
+             <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+
+
+                <img src="icons/cloud.svg" class="ico2">
+
+                 <h2 class="title-font font-medium text-3xl text-white"><%=dispCloud%>%</h2>
+                 <p class="leading-relaxed">Cloud Cover</p>
+               </div>
+             </div>
+             <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+               <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+            <img src="icons/pressure.svg" class="ico2">
+                 <h2 class="title-font font-medium text-3xl text-white"><%=dispPressure%> &#13169</h2>
+                 <p class="leading-relaxed">atm</p>
+               </div>
+             </div>
+           </div>
+         </div>
+
+
+
+         <div class=" container px-5 py-4 mx-auto">
+
+            <div class="flex flex-wrap -m-4 text-center">
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+
+                  <img src="icons/rise.svg" class="ico2">
+                  <h2 class="title-font font-medium text-3xl text-white"><%=dispRise%></h2>
+                  <p class="leading-relaxed">Sunrise</p>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+
+                  <img src="icons/set.svg" class="ico2">
+                  <h2 class="title-font font-medium text-3xl text-white"><%=dispSet%></h2>
+                  <p class="leading-relaxed">Sunset</p>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+
+
+                 <img src="icons/aqi2.png" class="ico2">
+
+                  <h2 class="title-font font-medium text-3xl text-white"><%=dispAQI%></h2>
+                  <p class="leading-relaxed">AQI</p>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-800 px-4 py-6 rounded-lg">
+                  <p class="leading-relaxed text-base ">Feels Like:    <%=dispFeels%>&#730C</p>
+                  <p class="leading-relaxed text-base">Max Temperature:    <%=dispMax%>&#730C</p>
+                  <p class="leading-relaxed text-base">Min Temperature:    <%=dispMin%>&#730C</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+      </section>
+
+      <style media="screen">
+        .ico {
+
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+          display: block;
+        }
+
+        .ico2{
+          height: 75px;
+          width: 75px;
+          filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+            display: block;
+            margin-left: auto;
+            margin-right: auto }
+        }
+
+
+
+
+      </style>
+
+
+</main>
+
+</body>

@@ -1,0 +1,113 @@
+<head>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>Dark Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/icons/02d.svg">
+</head>
+
+
+<section class="text-gray-400 bg-gray-900 body-font relative h-full">
+
+  <div class="flex flex-col text-center w-full mb-12 object-center">
+
+
+    <section class=" text-gray-400 bg-gray-900 body-font">
+      <div class="px-5  mx-auto flex flex-col">
+        <div class=" mx-auto">
+          <div class="my-20 rounded-lg h-64 overflow-hidden">
+            <img alt="content" class="object-cover object-center h-full w-full ico" id="image" src="blank_light.jpg" height: 256px; width:256px;>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Dark Weather</h1>
+
+  </div>
+  <div class="lg:w-1/2 md:w-2/3 mx-auto">
+    <div class="flex flex-wrap -m-2">
+
+
+      <div class="p-2 w-full">
+        <div class="relative text-center object-center">
+          <form method="post" class="search-form">
+
+            <input type="text" placeholder="Search" id="search" autocomplete="off" name="city"
+              class="w-2/3 bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-red-500 focus:bg-gray-900 focus:ring-2 focus:ring-red-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            <button type="submit" class="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">&#8981;</button>
+
+
+          </form>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</section>
+
+<footer class="text-gray-400 bg-gray-900 body-font">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+
+      <img class="ico" src="/icons/02d.svg" alt="" width="7%">
+      <span class="ml-3 text-xl">Dark Weather</span>
+    </a>
+    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2021 Dark Weather
+    </p>
+
+  </div>
+</footer>
+</body>
+
+
+
+
+
+
+
+
+
+
+<script>
+  var imageSources = ["/icons/01d.svg",
+    "/icons/01n.svg",
+    "/icons/02d.svg",
+    "/icons/02n.svg",
+    "/icons/03d.svg",
+    "/icons/03n.svg",
+    "/icons/04d.svg",
+    "/icons/04n.svg",
+    "/icons/09d.svg",
+    "/icons/09n.svg",
+    "/icons/10d.svg",
+    "/icons/10n.svg",
+    "/icons/11d.svg",
+    "/icons/11n.svg",
+    "/icons/13d.svg",
+    "/icons/13n.svg",
+    "/icons/50d.svg",
+    "/icons/50n.svg",
+
+  ]
+
+  var index = 0;
+  setInterval(function() {
+    if (index === imageSources.length) {
+      index = 0;
+    }
+    document.getElementById("image").src = imageSources[index];
+    index++;
+  }, 500);
+</script>
+
+<style media="screen">
+  .ico {
+
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    display: block;
+  }
+</style>
